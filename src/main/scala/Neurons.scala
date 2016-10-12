@@ -6,6 +6,6 @@ package main.scala
 class Neurons(var output: Double) {
   // Activation function
   def activation(): Double = {
-    1.0/(1.0 * math.pow(math.E, this.output))
+    1.0 / (1.0 * math.pow(math.E, this.output))
   }
 }

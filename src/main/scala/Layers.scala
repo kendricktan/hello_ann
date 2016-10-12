@@ -1,12 +1,13 @@
 package main.scala
 
 import scala.util.Random
+
 /**
   * Created by kendricktan on 10/10/16.
   */
-class Layers (rows: Int, var neurons: Array[Neurons]){
+class Layers(rows: Int, var neurons: Array[Neurons]) {
   // Multi dimensional array containing weight matrix
-  var weights : Array[Array[Double]] = null
+  var weights: Array[Array[Double]] = null
 
   // Auxiliary constructor
   // Random double between -1.25 and 1.25
@@ -15,5 +16,6 @@ class Layers (rows: Int, var neurons: Array[Neurons]){
     this(rows, Array.fill(rows)(new Neurons(-1.25 + (Random.nextDouble() * 2.5))))
   }
 
-  def length : Int = this.neurons.length
+  // Handy function to get length of neurons
+  def length: Int = this.neurons.length
 }

@@ -4,8 +4,10 @@ package main.scala
   * Created by kendricktan on 11/10/16.
   */
 object hello_ann {
-  def main(args: Array[String]) : Unit = {
-    // Basic  binary calculator
+  def main(args: Array[String]): Unit = {
+    // Basic binary calculator
+    // Do note that the input layers and output layers
+    // defined here must be the same size
     val inputs = Array[Double](1.0, 1.0, 1.0)
     val outputs = Array[Double](7.0)
 
@@ -16,12 +18,15 @@ object hello_ann {
     var network = new Network(3)
 
     // Hidden layer consists of 5 nodes
-    network.addLayer(5, true)
+    network.addLayer(5)
 
     // 1 node for output layer
-    network.addLayer(1, false)
+    network.addLayer(1)
 
     // Fit network to this output
-    network.fit(inputs.map(x => new Neurons(x)), outputs.map(x => new Neurons(x)))
+    for (x <- 0 until 100) {
+      println("Epoch: " + x)
+      network.fit(inputs.map(x => new Neurons(x)), outputs.map(x => new Neurons(x)))
+    }
   }
 }
