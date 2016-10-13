@@ -3,6 +3,8 @@ Hello world to Artifical Neural Networks, a.k.a implementing Artificial Neural N
 
 Intended purely for educational purposes only.
 
+![ann_screenshot](https://i.imgur.com/sTsfHQe.png)
+
 # FAQ
 - Whats the cost function?
     - mean square error
