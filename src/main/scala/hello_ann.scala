@@ -9,10 +9,10 @@ object hello_ann {
     val inputs = Array[Double](1.0, 0.0).map(x => new Neurons(x))
     val outputs = Array[Double](0.0, 1.0).map(x => new Neurons(x))
 
-    // Simple 3 layered ANN
+    // Simple 2 layered ANN
     // Input -> Hidden -> Output
     // Initialize our network
-    // Input layer has 3 nodes
+    // Input layer has 2 nodes
     var network = new Network(2)
 
     // Hidden layer consists of 5 nodes
